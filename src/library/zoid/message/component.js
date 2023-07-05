@@ -50,6 +50,20 @@ export default createGlobalVariableGetter('__paypal_credit_message__', () =>
             }
         },
         props: {
+            // disable-set-cookie=true
+            //features=disable-set-cookie
+            disableSetCookie: {
+                type: 'boolean',
+                queryParam: true,
+                required: false,
+                value: validate.disableSetCookie
+            },
+            features: {
+                type: 'string',
+                queryParam: 'disableSetCookie',
+                required: false,
+                value: validate.features
+            },
             account: {
                 type: 'string',
                 queryParam: false,
